@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-orange: #FF4500;
+  --color-brand-orange-hover: #E03D00;
+  --color-brand-dark: #0F0F11;
+  --color-brand-charcoal: #1E1E22;
+  --color-brand-gray: #52525B;
+  --color-brand-bg: #F7F7F8;
+  --color-brand-border: #E4E4E7;
+}
+
+/* Custom styles for high-end aesthetic */
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-dark);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Clean scrollbar for tech feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A1A1AA;
+}
+
+/* Custom tech grid paper effect */
+.tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}

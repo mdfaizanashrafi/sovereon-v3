@@ -1,0 +1,6 @@
+{
+  "name": "Sovereon",
+  "description": "Sovereon Inc. - Advanced systems engineering, digital sovereignty, and high-performance modular software solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
