@@ -33,7 +33,7 @@ export default async function handler(req: any, res: any) {
     // onboarding@resend.dev is the default sender for free/unverified domains on Resend
     const result = await resend.emails.send({
       from: 'Sovereon Form <onboarding@resend.dev>',
-      to: 'mdfaizanashrafi13032001@gmail.com',
+      to: 'partners@sovereon.online',
       subject: subject || `Sovereon Consultation Request from ${name}`,
       html: `
         <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e4e4e7; rounded: 12px; border-radius: 12px;">
