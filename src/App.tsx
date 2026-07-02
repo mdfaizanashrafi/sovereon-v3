@@ -83,9 +83,15 @@ export default function App() {
           {/* Column 1: Sovereon Brand block - Image 2/3 */}
           <div className="md:col-span-4 space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="h-6 w-6 rounded-full border border-brand-dark bg-brand-orange flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-brand-bg"></div>
-              </div>
+              <svg
+                viewBox="0 0 100 100"
+                className="h-6 w-6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="50" cy="50" r="45" fill="#FF4500" stroke="#000000" strokeWidth="10" />
+                <ellipse cx="50" cy="50" rx="18" ry="26" fill="#FFFFFF" />
+              </svg>
               <span className="font-display text-xl font-extrabold tracking-tight text-brand-dark">
                 SOVEREON<span className="text-brand-orange">.</span>
               </span>

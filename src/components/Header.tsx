@@ -37,17 +37,18 @@ export default function Header({ activeSection, setActiveSection, onGetInTouch }
           className="group flex items-center space-x-3 transition-opacity hover:opacity-90"
           id="sovereon-logo-btn"
         >
-          {/* Circular Icon (Orange circle with black outline and white center - Image 5) */}
-          <div className="relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-brand-dark bg-brand-orange shadow-sm transition-transform group-hover:scale-105">
-            <div className="h-3 w-3 rounded-full bg-brand-bg"></div>
-            {/* Minimal designer crosshair accents */}
-            <div className="absolute -top-1 left-1/2 h-1 w-[2px] -translate-x-1/2 bg-brand-dark"></div>
-            <div className="absolute -bottom-1 left-1/2 h-1 w-[2px] -translate-x-1/2 bg-brand-dark"></div>
-            <div className="absolute top-1/2 -left-1 w-1 h-[2px] -translate-y-1/2 bg-brand-dark"></div>
-            <div className="absolute top-1/2 -right-1 w-1 h-[2px] -translate-y-1/2 bg-brand-dark"></div>
-          </div>
+          {/* Circular Icon (Orange circle with black outline and white center - exactly matching uploaded image) */}
+          <svg
+            viewBox="0 0 100 100"
+            className="h-8 w-8 transition-transform group-hover:scale-105"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="50" cy="50" r="45" fill="#FF4500" stroke="#000000" strokeWidth="10" />
+            <ellipse cx="50" cy="50" rx="18" ry="26" fill="#FFFFFF" />
+          </svg>
           
-          {/* SOVEREON Lettering (SOVER in Black, EON in Orange-Red - Image 4) */}
+          {/* SOVEREON Lettering (SOVER in Black, EON in Orange-Red) */}
           <span className="font-display text-2xl font-bold tracking-tight text-brand-dark">
             SOVER<span className="text-brand-orange">EON</span>
           </span>
