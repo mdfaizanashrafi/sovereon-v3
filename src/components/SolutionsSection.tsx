@@ -698,69 +698,7 @@ export default function SolutionsSection() {
           </div>
         </div>
 
-        {/* PERSISTENT TICKETS LOGS (Durable Cloud / Local Storage Client Panel) */}
-        {submissions.length > 0 && (
-          <div className="mt-16 max-w-5xl mx-auto border border-brand-border bg-white rounded-2xl p-6 shadow-sm animate-in fade-in duration-300">
-            <div className="flex items-center justify-between border-b border-brand-border/60 pb-4 mb-6">
-              <div className="flex items-center space-x-2">
-                <History className="h-4.5 w-4.5 text-brand-orange animate-spin-slow" />
-                <h3 className="font-display font-black text-sm text-brand-dark tracking-tight">
-                  SOVEREON SYSTEM TICKETS (LOCAL INSTANCE WORKSPACE)
-                </h3>
-              </div>
-              <button
-                onClick={() => {
-                  if (confirm('Delete all consultation tickets?')) {
-                    setSubmissions([]);
-                    localStorage.removeItem('sovereon_submissions');
-                  }
-                }}
-                className="flex items-center space-x-1 text-[10px] font-bold uppercase text-red-500 hover:text-red-700 transition-colors"
-              >
-                <Trash2 className="h-3.5 w-3.5" />
-                <span>Wipe Database Cache</span>
-              </button>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {submissions.map((ticket) => (
-                <div key={ticket.id} className="border border-brand-border/80 rounded-xl p-4 bg-brand-bg/25 relative group hover:border-brand-dark transition-all">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[9px] font-extrabold text-brand-orange uppercase bg-brand-orange/5 px-2 py-0.5 rounded border border-brand-orange/10">
-                      {ticket.id}
-                    </span>
-                    <span className="font-mono text-[9px] text-brand-gray">
-                      Time: {ticket.timestamp}
-                    </span>
-                  </div>
-
-                  <div className="space-y-1 mb-3">
-                    <div className="flex items-center space-x-1.5">
-                      <span className="font-display text-xs font-bold text-brand-dark">{ticket.name}</span>
-                      <span className="text-brand-gray/40 text-[10px]">•</span>
-                      <span className="font-mono text-[9px] text-brand-gray uppercase tracking-tighter">{ticket.company}</span>
-                    </div>
-                    <div className="font-mono text-[9px] text-brand-gray uppercase">
-                      Interest: <span className="font-bold text-brand-dark">{ticket.projectType}</span>
-                    </div>
-                  </div>
-
-                  <p className="text-xs text-brand-gray leading-relaxed border-t border-brand-border/40 pt-2 font-medium">
-                    {ticket.message}
-                  </p>
-
-                  <button
-                    onClick={() => deleteSubmission(ticket.id)}
-                    className="absolute bottom-4 right-4 text-brand-gray hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity"
-                    title="Delete record"
-                  >
-                    <Trash2 className="h-3.5 w-3.5" />
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </section>
     </div>
   );

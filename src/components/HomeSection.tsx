@@ -177,22 +177,22 @@ export default function HomeSection({
 
             {/* Pillar list */}
             <div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-4 sm:gap-x-6 text-sm font-semibold font-mono text-brand-dark">
-              <span className="flex items-center space-x-1.5 text-brand-orange">
+              <span className="flex items-center space-x-1.5 hover:text-brand-orange transition-colors duration-200 cursor-pointer">
                 <Activity className="h-4 w-4" />
                 <span>24×7 System Integrity</span>
               </span>
               <span className="text-brand-border select-none">|</span>
-              <span className="flex items-center space-x-1.5">
+              <span className="flex items-center space-x-1.5 hover:text-brand-orange transition-colors duration-200 cursor-pointer">
                 <Cpu className="h-4 w-4" />
                 <span>Expert Engineering Team</span>
               </span>
               <span className="text-brand-border select-none">|</span>
-              <span className="flex items-center space-x-1.5">
+              <span className="flex items-center space-x-1.5 hover:text-brand-orange transition-colors duration-200 cursor-pointer">
                 <Database className="h-4 w-4" />
                 <span>AI as Infrastructure</span>
               </span>
               <span className="text-brand-border select-none">|</span>
-              <span className="flex items-center space-x-1.5 text-brand-gray">
+              <span className="flex items-center space-x-1.5 hover:text-brand-orange transition-colors duration-200 cursor-pointer">
                 <Award className="h-4 w-4" />
                 <span>Proven Mathematical Results</span>
               </span>
