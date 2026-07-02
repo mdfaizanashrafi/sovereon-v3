@@ -102,7 +102,7 @@ export default function App() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-3.5 w-3.5 text-brand-dark" />
-                <span>sovereon@sovereon.online</span>
+                <span>partners@sovereon.online</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-3.5 w-3.5 text-brand-dark" />
