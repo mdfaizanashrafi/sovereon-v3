@@ -96,7 +96,7 @@ export default function HomeSection({
           {/* Left Text Column */}
           <div className="lg:col-span-6 flex flex-col justify-center space-y-6">
             <h1 className="font-display text-4xl font-extrabold tracking-tight text-brand-dark sm:text-5xl lg:text-6xl">
-              SOVEREON INC.
+              SOVEREON
             </h1>
             
             <h2 className="font-mono text-sm font-semibold uppercase tracking-widest text-brand-gray">
@@ -104,7 +104,7 @@ export default function HomeSection({
             </h2>
             
             <p className="text-base leading-relaxed text-brand-gray/90 sm:text-lg">
-              Sovereon Inc. is a modular monolith systems engineering firm. We design, build, and deploy high-performance, ultra-reliable infrastructure and decentralized systems. Guided by SOLID design patterns and rigorous zero-trust architectures, we empower modern enterprises to achieve complete data freedom, cloud autonomy, and infinite scalability.
+              Sovereon is a modular monolith systems engineering firm. We design, build, and deploy high-performance, ultra-reliable infrastructure and decentralized systems. Guided by SOLID design patterns and rigorous zero-trust architectures, we empower modern enterprises to achieve complete data freedom, cloud autonomy, and infinite scalability.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
