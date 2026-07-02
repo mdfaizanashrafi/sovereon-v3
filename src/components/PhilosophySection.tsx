@@ -19,7 +19,7 @@ export default function PhilosophySection() {
       company: 'DynamicMenu',
       text: "We switched from printed menus to DynamicMenu three months ago, and it's been a game changer for our restaurant. Updating prices, adding seasonal dishes, and sharing the menu through a QR code takes just a few minutes. It has saved us both time and printing costs, and our customers love the clean digital experience.",
       rating: 5,
-      metrics: { label: 'PRINTING COST REDUCTION', value: '-92%' }
+      metrics: { label: 'PRINTING COST REDUCTION', value: '92%' }
     },
     {
       id: 'rev-2',
