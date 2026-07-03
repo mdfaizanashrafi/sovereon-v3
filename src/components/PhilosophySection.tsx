@@ -39,6 +39,15 @@ export default function PhilosophySection() {
       text: "As someone who travels frequently for work, staying consistent with my fitness routine was nearly impossible. GymRat solved that problem perfectly. I can discover partner gyms in any city, access my workout history, and keep my training streak alive wherever I go. It's become an essential app for my lifestyle.",
       rating: 5,
       metrics: { label: 'STREAK RETENTION', value: '100%' }
+    },
+    {
+      id: 'rev-4',
+      author: 'Aarav Sharma',
+      role: 'Community Lead',
+      company: 'de-screen',
+      text: "Our local meetups saw a complete transformation after using de-screen. Finding genuine people for real-life experiences has never been easier. It helped us escape digital fatigue and build lasting, offline human connections.",
+      rating: 5,
+      metrics: { label: 'IN-PERSON ENGAGEMENT', value: '4.8x' }
     }
   ];
 
@@ -77,18 +86,22 @@ export default function PhilosophySection() {
               
               {/* Architecture Service Mapping */}
               <div className="flex flex-col space-y-2.5 my-auto">
-                <div className="grid grid-cols-3 gap-2">
-                  <div className="rounded bg-brand-orange/10 border border-brand-orange/20 p-2 text-center">
-                    <span className="block font-mono text-[8px] font-bold text-brand-orange">DynamicMenu</span>
-                    <span className="block font-sans text-[7px] text-brand-gray/80 mt-0.5">Menu / QR Core</span>
+                <div className="grid grid-cols-4 gap-1.5">
+                  <div className="rounded bg-brand-orange/10 border border-brand-orange/20 p-1 text-center">
+                    <span className="block font-mono text-[7px] font-bold text-brand-orange">DynamicMenu</span>
+                    <span className="block font-sans text-[6px] text-brand-gray/80 mt-0.5">Menu Core</span>
                   </div>
-                  <div className="rounded bg-brand-dark/5 border border-brand-dark/10 p-2 text-center">
-                    <span className="block font-mono text-[8px] font-bold text-brand-dark">MedicOrder</span>
-                    <span className="block font-sans text-[7px] text-brand-gray/80 mt-0.5">Order Routing</span>
+                  <div className="rounded bg-brand-dark/5 border border-brand-dark/10 p-1 text-center">
+                    <span className="block font-mono text-[7px] font-bold text-brand-dark">MedicOrder</span>
+                    <span className="block font-sans text-[6px] text-brand-gray/80 mt-0.5">Logistics</span>
                   </div>
-                  <div className="rounded bg-brand-dark/5 border border-brand-dark/10 p-2 text-center">
-                    <span className="block font-mono text-[8px] font-bold text-brand-dark">GymRat</span>
-                    <span className="block font-sans text-[7px] text-brand-gray/80 mt-0.5">Geo Traversal</span>
+                  <div className="rounded bg-brand-dark/5 border border-brand-dark/10 p-1 text-center">
+                    <span className="block font-mono text-[7px] font-bold text-brand-dark">GymRat</span>
+                    <span className="block font-sans text-[6px] text-brand-gray/80 mt-0.5">Tracking</span>
+                  </div>
+                  <div className="rounded bg-brand-orange/10 border border-brand-orange/20 p-1 text-center">
+                    <span className="block font-mono text-[7px] font-bold text-brand-orange">de-screen</span>
+                    <span className="block font-sans text-[6px] text-brand-gray/80 mt-0.5">Connection</span>
                   </div>
                 </div>
 

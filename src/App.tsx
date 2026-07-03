@@ -16,6 +16,7 @@ import BlogSection from './components/BlogSection';
 import TopicClusterSection from './components/TopicClusterSection';
 import SEOManager from './components/SEOManager';
 import { TOPIC_PAGES } from './data/seoContent';
+import SanityTestSection from './components/SanityTestSection';
 
 export default function App() {
   const [activeRoute, setActiveRoute] = useState<string>('/');
@@ -152,6 +153,10 @@ export default function App() {
               <ContactSection />
             )}
 
+            {activeRoute === '/sanity-test' && (
+              <SanityTestSection />
+            )}
+
             {/* Systems Blog Router (Task 3 Compliant Engine) */}
             {activeRoute.startsWith('/blog') && (
               <BlogSection activeRoute={activeRoute} />
@@ -168,6 +173,7 @@ export default function App() {
              activeRoute !== '/solutions' && 
              activeRoute !== '/about' && 
              activeRoute !== '/contact' && 
+             activeRoute !== '/sanity-test' && 
              !activeRoute.startsWith('/blog') && 
              !isTopicPage && (
               <div className="mx-auto max-w-xl text-center py-24 px-6 space-y-4">

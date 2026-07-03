@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect, useRef, FormEvent } from 'react';
-import { Cpu, Terminal, Layers, Send, ShieldCheck, Database, HelpCircle, CheckCircle2, History, Trash2, ArrowRight, Utensils, Pill, Dumbbell, QrCode, AlertCircle } from 'lucide-react';
+import { Cpu, Terminal, Layers, Send, ShieldCheck, Database, HelpCircle, CheckCircle2, History, Trash2, ArrowRight, Utensils, Pill, Dumbbell, QrCode, AlertCircle, Users } from 'lucide-react';
 import { Solution, ContactSubmission } from '../types';
 
 export default function SolutionsSection() {
@@ -27,6 +27,7 @@ export default function SolutionsSection() {
     'sol-1': useRef<HTMLDivElement>(null),
     'sol-2': useRef<HTMLDivElement>(null),
     'sol-3': useRef<HTMLDivElement>(null),
+    'sol-4': useRef<HTMLDivElement>(null),
   };
 
   const contactFormRef = useRef<HTMLDivElement>(null);
@@ -55,6 +56,14 @@ export default function SolutionsSection() {
       summary: 'SaaS for nomadic training & fitness tracking',
       description: 'A global training-hub locator and session scheduler designed specifically for traveling fitness enthusiasts. Aggregates partner gym locations across the country, syncs workout logs, and secures streak retention no matter where you move.',
       techSpecs: ['Geo Radius: Country-wide', 'Sync Latency: Sub-second', 'Workouts tracked: Unlimited', 'Partner network: 2,500+ gyms']
+    },
+    {
+      id: 'sol-4',
+      frameId: 9,
+      title: 'de-screen',
+      summary: 'Connect with genuine people for meaningful in-person experiences.',
+      description: 'Escape digital fatigue and rediscover the joy of real human connection. A modern tool assisting communities to coordinate high-value offline meetups, share interactive localized maps, and secure distraction-free presence without screens.',
+      techSpecs: ['Platform: Web-Native', 'Connection: In-person', 'Redirect: External Vercel', 'Interface: Zero-Screen']
     }
   ];
 
@@ -230,46 +239,56 @@ export default function SolutionsSection() {
         
         <div className="mx-auto mt-4 h-[2px] w-24 bg-brand-orange"></div>
 
-        {/* THREE SQUARE BOXES BENTO-GRID (FRAMES 6 TO 8) */}
-        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-3">
-          {solutionsList.map((sol) => (
-            <button
-              key={sol.id}
-              onClick={() => handleSolutionSelect(sol.id)}
-              className={`aspect-square w-full rounded-2xl border p-6 text-left flex flex-col justify-between transition-all duration-300 relative group cursor-pointer ${
-                selectedSolution === sol.id
-                  ? 'border-brand-dark bg-white shadow-md scale-[1.02]'
-                  : 'border-brand-border bg-white hover:border-brand-gray/50 hover:shadow-sm'
-              }`}
-              id={`solution-square-btn-${sol.id}`}
-            >
-              {/* Technical index indicator */}
-              <div className="flex items-center justify-end">
-                <span className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                  selectedSolution === sol.id ? 'bg-brand-orange animate-pulse' : 'bg-brand-border'
-                }`}></span>
-              </div>
+        {/* FOUR SQUARE BOXES BENTO-GRID (FRAMES 6 TO 9) */}
+        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {solutionsList.map((sol) => {
+            const isRedirect = sol.id === 'sol-4';
+            const CardComponent = isRedirect ? 'a' : 'button';
+            return (
+              <CardComponent
+                key={sol.id}
+                {...(isRedirect ? {
+                  href: 'https://de-screen-web.vercel.app/',
+                  target: '_blank',
+                  rel: 'noopener noreferrer'
+                } : {
+                  onClick: () => handleSolutionSelect(sol.id)
+                })}
+                className={`aspect-square w-full rounded-2xl border p-6 text-left flex flex-col justify-between transition-all duration-300 relative group cursor-pointer ${
+                  selectedSolution === sol.id
+                    ? 'border-brand-dark bg-white shadow-md scale-[1.02]'
+                    : 'border-brand-border bg-white hover:border-brand-gray/50 hover:shadow-sm'
+                }`}
+                id={`solution-square-btn-${sol.id}`}
+              >
+                {/* Technical index indicator */}
+                <div className="flex items-center justify-end">
+                  <span className={`h-2.5 w-2.5 rounded-full transition-colors ${
+                    selectedSolution === sol.id ? 'bg-brand-orange animate-pulse' : 'bg-brand-border'
+                  }`}></span>
+                </div>
 
-              {/* Box Title */}
-              <div className="flex flex-col space-y-1">
-                <span className="font-mono text-[9px] uppercase tracking-wider text-brand-gray">
-                  SOLUTION 0{sol.frameId - 5}
-                </span>
-                <h3 className="font-display text-lg font-extrabold tracking-tight text-brand-dark group-hover:text-brand-orange transition-colors">
-                  {sol.title}
-                </h3>
-                <span className="font-mono text-[10px] text-brand-gray/80 uppercase tracking-tighter">
-                  {sol.summary}
-                </span>
-              </div>
+                {/* Box Title */}
+                <div className="flex flex-col space-y-1">
+                  <span className="font-mono text-[9px] uppercase tracking-wider text-brand-gray">
+                    SOLUTION 0{sol.frameId - 5}
+                  </span>
+                  <h3 className="font-display text-lg font-extrabold tracking-tight text-brand-dark group-hover:text-brand-orange transition-colors">
+                    {sol.title}
+                  </h3>
+                  <span className="font-mono text-[10px] text-brand-gray/80 uppercase tracking-tighter line-clamp-2">
+                    {sol.summary}
+                  </span>
+                </div>
 
-              {/* Bottom detail action */}
-              <div className="flex items-center justify-between font-mono text-[10px] font-semibold text-brand-gray/60 group-hover:text-brand-dark">
-                <span>[ ENGAGE SYSTEM_0{sol.frameId - 5} ]</span>
-                <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-              </div>
-            </button>
-          ))}
+                {/* Bottom detail action */}
+                <div className="flex items-center justify-between font-mono text-[10px] font-semibold text-brand-gray/60 group-hover:text-brand-dark">
+                  <span>{isRedirect ? '[ REDIRECT TO SYSTEM ]' : `[ ENGAGE SYSTEM_0${sol.frameId - 5} ]`}</span>
+                  <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                </div>
+              </CardComponent>
+            );
+          })}
         </div>
       </section>
 
@@ -497,6 +516,90 @@ export default function SolutionsSection() {
             </div>
           </div>
 
+          {/* Frame 12: Solution 4 Details */}
+          <div 
+            ref={detailRefs['sol-4']}
+            className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-28 transition-all duration-300 ${
+              selectedSolution === 'sol-4' ? 'opacity-100' : 'opacity-65'
+            }`}
+          >
+            {/* Description Text (Left - Zigzag order) */}
+            <div className="md:col-span-7 md:order-1 flex flex-col space-y-4 md:text-right">
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-brand-orange">
+                DE-SCREEN PLATFORM
+              </span>
+              <h3 className="font-display text-2xl font-black tracking-tight text-brand-dark">
+                de-screen Real Connection Space
+              </h3>
+              <p className="text-sm leading-relaxed text-brand-gray">
+                {solutionsList[3].description}
+              </p>
+              
+              <div className="flex flex-col md:items-end pt-2 pb-4">
+                <a 
+                  href="https://de-screen-web.vercel.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center space-x-2 rounded-full border-2 border-brand-orange bg-brand-orange/5 px-5 py-2.5 text-xs font-bold tracking-wider text-brand-orange uppercase hover:bg-brand-orange hover:text-white transition-all duration-300 shadow-sm"
+                >
+                  <span>Launch de-screen platform</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
+
+              {/* Custom specs */}
+              <div className="grid grid-cols-2 gap-3 pt-3 border-t border-brand-border/60 md:justify-items-end">
+                {solutionsList[3].techSpecs.map(spec => (
+                  <div key={spec} className="flex flex-col md:items-end">
+                    <span className="font-mono text-[10px] text-brand-gray uppercase tracking-tighter">CONNECTION SPEC</span>
+                    <span className="font-mono text-xs font-semibold text-brand-dark">{spec}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Square box representation (Right) */}
+            <div className="md:col-span-5 md:order-2">
+              <div className="aspect-square w-full rounded-2xl border-2 border-brand-dark bg-brand-bg p-6 flex flex-col justify-between shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 right-0 h-14 w-14 bg-brand-dark text-white flex items-center justify-center font-mono text-[10px] font-bold">
+                  SF_12
+                </div>
+                
+                <div className="flex flex-col space-y-3.5 flex-1 justify-center">
+                  <div className="flex items-center justify-between border-b border-brand-border/40 pb-2">
+                    <div className="flex items-center space-x-2">
+                      <Users className="h-4 w-4 text-brand-orange animate-pulse" />
+                      <span className="font-mono text-[9px] font-extrabold text-brand-dark tracking-tighter">DE_SCREEN // OFFLINE</span>
+                    </div>
+                    <span className="text-[7px] font-mono bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold">ZERO_SCREEN</span>
+                  </div>
+                  
+                  {/* Real connection visualization */}
+                  <div className="bg-white/80 p-2.5 rounded-lg border border-brand-border/60 space-y-1.5 text-left">
+                    <div className="flex items-center justify-between text-brand-dark font-mono text-[7.5px] font-bold">
+                      <span>Bangalore Offline Gathering</span>
+                      <span className="text-brand-orange">● HOSTED BY FAIZAN</span>
+                    </div>
+                    <div className="flex justify-between items-center text-[7.5px] text-brand-dark font-bold font-mono">
+                      <span>📍 Cubbon Park Meetup</span>
+                      <span className="text-brand-gray text-[7px]">Tomorrow 4:00 PM</span>
+                    </div>
+                    <div className="h-[1px] w-full bg-brand-border/30 my-1"></div>
+                    <div className="flex justify-between items-center text-[7px] font-mono">
+                      <span className="text-emerald-600 font-bold">12 PEOPLE CONFIRMED</span>
+                      <span className="text-brand-gray font-bold">NO PHONES ALLOWED</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col pt-2 border-t border-brand-border/40 text-left">
+                  <span className="font-mono text-[9px] uppercase text-brand-gray tracking-widest">Real Connection</span>
+                  <span className="font-display text-lg font-black">de-screen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -598,6 +701,7 @@ export default function SolutionsSection() {
                       <option value="sol-1">DynamicMenu</option>
                       <option value="sol-2">MedicOrder</option>
                       <option value="sol-3">GymRat</option>
+                      <option value="sol-4">de-screen</option>
                       <option value="build-for-me">BuildForMe</option>
                     </select>
                   </div>

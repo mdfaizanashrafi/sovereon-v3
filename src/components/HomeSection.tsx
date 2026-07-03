@@ -42,6 +42,7 @@ export default function HomeSection({
     { name: 'DynamicMenu', symbol: '🍽️', description: 'SaaS for restaurants menu creation tool' },
     { name: 'MedicOrder', symbol: '💊', description: 'SaaS for Wholesale order of medicines' },
     { name: 'GymRat', symbol: '🏋️', description: 'SaaS for gym rats on the move' },
+    { name: 'de-screen', symbol: '👥', description: 'SaaS for meaningful in-person experiences' },
   ];
 
   // Double the products array to allow seamless looping in the marquee
@@ -78,6 +79,16 @@ export default function HomeSection({
       link: '#',
       category: 'Fitness & Travel',
       tags: ['Geolocation', 'WASM', 'Real-Time Sync']
+    },
+    {
+      id: 'proj-4',
+      name: 'de-screen',
+      logoText: 'DS',
+      logoBg: 'bg-brand-dark text-white hover:bg-brand-orange hover:text-white group-hover:bg-brand-orange group-hover:text-white transition-all duration-300 cursor-pointer',
+      description: 'Connect with genuine people for meaningful in-person experiences. Escape digital fatigue and rediscover the joy of real human connection.',
+      link: 'https://de-screen-web.vercel.app/',
+      category: 'Offline Social',
+      tags: ['In-Person', 'Social Network', 'Anti-Screen']
     }
   ];
 
@@ -258,54 +269,61 @@ export default function HomeSection({
 
         {/* Project Card Grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {currentProjects.map((project) => (
-            <div 
-              key={project.id} 
-              className="group flex flex-col justify-between rounded-xl border border-brand-border bg-white p-6 transition-all duration-300 hover:border-brand-dark hover:shadow-md"
-            >
-              <div>
-                {/* Card Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    {/* Logo block */}
-                    <div className={`flex h-11 w-11 items-center justify-center rounded-lg font-mono text-base font-bold shadow-sm ${project.logoBg}`}>
-                      {project.logoText}
+          {currentProjects.map((project) => {
+            const isExternal = project.link.startsWith('http');
+            const CardComponent = isExternal ? 'a' : 'div';
+            return (
+              <CardComponent 
+                key={project.id} 
+                href={isExternal ? project.link : undefined}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener noreferrer' : undefined}
+                className={`group flex flex-col justify-between rounded-xl border border-brand-border bg-white p-6 transition-all duration-300 hover:border-brand-dark hover:shadow-md ${isExternal ? 'cursor-pointer' : ''}`}
+              >
+                <div>
+                  {/* Card Header */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      {/* Logo block */}
+                      <div className={`flex h-11 w-11 items-center justify-center rounded-lg font-mono text-base font-bold shadow-sm ${project.logoBg}`}>
+                        {project.logoText}
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="font-display font-extrabold text-base text-brand-dark">
+                          {project.name}
+                        </span>
+                        <span className="font-mono text-[9px] uppercase tracking-wider text-brand-gray">
+                          {project.category}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex flex-col">
-                      <span className="font-display font-extrabold text-base text-brand-dark">
-                        {project.name}
-                      </span>
-                      <span className="font-mono text-[9px] uppercase tracking-wider text-brand-gray">
-                        {project.category}
-                      </span>
-                    </div>
+
+                    {/* Icon Link Accent */}
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-bg text-brand-gray transition-colors group-hover:bg-brand-orange group-hover:text-white">
+                      <ArrowUpRight className="h-4 w-4" />
+                    </span>
                   </div>
 
-                  {/* Icon Link Accent */}
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-bg text-brand-gray transition-colors group-hover:bg-brand-orange group-hover:text-white">
-                    <ArrowUpRight className="h-4 w-4" />
-                  </span>
+                  {/* Description */}
+                  <p className="text-sm leading-relaxed text-brand-gray group-hover:text-brand-dark transition-colors mb-6">
+                    {project.description}
+                  </p>
                 </div>
 
-                {/* Description */}
-                <p className="text-sm leading-relaxed text-brand-gray group-hover:text-brand-dark transition-colors mb-6">
-                  {project.description}
-                </p>
-              </div>
-
-              {/* Tags footer */}
-              <div className="flex flex-wrap gap-2 border-t border-brand-border/50 pt-4">
-                {project.tags.map(tag => (
-                  <span 
-                    key={tag} 
-                    className="rounded-md bg-brand-bg px-2.5 py-1 font-mono text-[10px] font-semibold text-brand-dark/70 border border-brand-border/40 uppercase"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+                {/* Tags footer */}
+                <div className="flex flex-wrap gap-2 border-t border-brand-border/50 pt-4">
+                  {project.tags.map(tag => (
+                    <span 
+                      key={tag} 
+                      className="rounded-md bg-brand-bg px-2.5 py-1 font-mono text-[10px] font-semibold text-brand-dark/70 border border-brand-border/40 uppercase"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </CardComponent>
+            );
+          })}
         </div>
 
         {/* Bottom Callout */}
