@@ -24,6 +24,7 @@ export default function HomeSection({
   
   const [imageIndex, setImageIndex] = useState(0);
   const imageSources = [
+    'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png',
     founderImg,
     '/assets/founder.jpg',
     '/founder.jpg',
@@ -99,12 +100,35 @@ export default function HomeSection({
               SOVEREON
             </h1>
             
-            <h2 className="font-mono text-sm font-semibold uppercase tracking-widest text-brand-gray">
-              DESCRIPTION OF COMPANY
+            <h2 className="font-mono text-sm font-semibold uppercase tracking-widest text-brand-orange">
+              Sovereign Systems & Software Engineering
             </h2>
             
-            <p className="text-base leading-relaxed text-brand-gray/90 sm:text-lg">
-              Sovereon is a modular monolith systems engineering firm. We design, build, and deploy high-performance, ultra-reliable infrastructure and decentralized systems. Guided by SOLID design patterns and rigorous zero-trust architectures, we empower modern enterprises to achieve complete data freedom, cloud autonomy, and infinite scalability.
+            <p className="text-sm leading-relaxed text-brand-gray/90 font-medium">
+              Based in Bangalore, India, <strong>Sovereon LLP</strong> is an elite systems engineering and digital product firm. Founded by Md Faizan Ashrafi, we specialize in building robust, secure, and highly scalable applications for both Indian and global markets. We reject the over-complications of modern software architecture in favor of clean design, modular systems, and digital sovereignty.
+            </p>
+
+            <p className="text-sm leading-relaxed text-brand-gray/90 font-medium">
+              Our engineering philosophy is centered around three primary pillars:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-2">
+              <div className="rounded-lg border border-brand-border/60 bg-brand-bg/20 p-3">
+                <span className="block font-mono text-[9px] font-bold text-brand-orange uppercase">01 / SAAS ENGINEERING</span>
+                <span className="block text-xs text-brand-dark/90 font-medium mt-1">Deploying zero-trust, modular monolith SaaS models that scale without network overhead.</span>
+              </div>
+              <div className="rounded-lg border border-brand-border/60 bg-brand-bg/20 p-3">
+                <span className="block font-mono text-[9px] font-bold text-brand-orange uppercase">02 / AI AUTOMATION</span>
+                <span className="block text-xs text-brand-dark/90 font-medium mt-1">Embedding intelligent agents and tool-calling models natively into secure backends.</span>
+              </div>
+              <div className="rounded-lg border border-brand-border/60 bg-brand-bg/20 p-3">
+                <span className="block font-mono text-[9px] font-bold text-brand-orange uppercase">03 / SYSTEMS DESIGN</span>
+                <span className="block text-xs text-brand-dark/90 font-medium mt-1">Formulating high-performance database schemas and low-latency API networks.</span>
+              </div>
+            </div>
+
+            <p className="text-xs leading-relaxed text-brand-gray/80">
+              We empower startups and enterprises to break free from proprietary cloud vendor locks, ensuring complete custody over their databases, transactional logs, and intellectual property. Let's build something beautiful and resilient.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -310,8 +334,12 @@ export default function HomeSection({
                   src={imageSources[imageIndex]}
                   onError={handleImageError}
                   alt="Md. Faizan Ashrafi"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105"
+                  width="380"
+                  height="380"
                 />
               </div>
             </div>

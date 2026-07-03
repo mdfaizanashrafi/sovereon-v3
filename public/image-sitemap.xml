@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Indexing Images on Main Home Page -->
+  <url>
+    <loc>https://sovereon.online</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png</image:loc>
+      <image:title>Md Faizan Ashrafi - Founder and CEO of Sovereon LLP</image:title>
+      <image:caption>Md Faizan Ashrafi, Lead Systems Architect and Founder of Sovereon LLP in Bangalore, Karnataka, India.</image:caption>
+      <image:geo_location>Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://sovereon.online/favicon.svg</image:loc>
+      <image:title>Sovereon LLP Corporate Logo Symbol</image:title>
+      <image:caption>The official vector branding symbol representing Sovereon LLP, a full-stack SaaS and systems engineering firm.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Us Section Images -->
+  <url>
+    <loc>https://sovereon.online/about</loc>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png</image:loc>
+      <image:title>Md Faizan Ashrafi - Lead Architect of Sovereon LLP</image:title>
+      <image:caption>Md Faizan Ashrafi directing core modular monolith system designs from our Bangalore engineering headquarters.</image:caption>
+      <image:geo_location>Bangalore, Karnataka, India</image:geo_location>
+    </image:image>
+  </url>
+</urlset>

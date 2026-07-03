@@ -1,0 +1,14 @@
+# www.robotstxt.org/
+# For Sovereon.online SEO Optimization - Task 5 + 8 Compliance
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /favicon.svg
+Allow: /founder.jpg
+Allow: /blog
+Allow: /solutions
+
+# Sitemaps
+Sitemap: https://sovereon.online/sitemap.xml
+Sitemap: https://sovereon.online/image-sitemap.xml

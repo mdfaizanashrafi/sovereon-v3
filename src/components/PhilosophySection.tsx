@@ -4,11 +4,12 @@
  */
 
 import { useState } from 'react';
-import { ShieldCheck, HardDrive, RefreshCw, KeyRound, ArrowDown, UserCheck, Star, Sparkles, Server, Cpu, Globe } from 'lucide-react';
+import { ShieldCheck, HardDrive, RefreshCw, KeyRound, ArrowDown, UserCheck, Star, Sparkles, Server, Cpu, Globe, HelpCircle } from 'lucide-react';
 import { Review } from '../types';
 
 export default function PhilosophySection() {
   const [hoveredReviewId, setHoveredReviewId] = useState<string | null>(null);
+  const [activeFaqId, setActiveFaqId] = useState<string | null>(null);
 
   // Reviews data for hovering interactivity
   const reviews: Review[] = [
@@ -118,9 +119,15 @@ export default function PhilosophySection() {
           {/* Frame 1 Text */}
           <div className="md:col-span-6 flex flex-col space-y-3">
             <span className="font-mono text-xs font-bold uppercase tracking-wider text-brand-orange">1. Philosophy 1</span>
-            <h3 className="font-display text-xl font-bold text-brand-dark">SYSTEMS OVER SOFTWARE</h3>
-            <p className="text-sm leading-relaxed text-brand-gray">
-              We engineer coherent, comprehensive architectures instead of isolated code modules. By considering network latency, compiler attributes, and raw metal limits simultaneously, we guarantee true operational cohesion and absolute reliability.
+            <h3 className="font-display text-xl font-bold text-brand-dark uppercase tracking-tight">Systems Engineering Over Software Development</h3>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              We approach engineering not as writing disjointed lines of code, but as building coherent, unified industrial systems. While traditional software development focus on shipping isolated features or adding external packages, true <strong>Systems Engineering</strong> designs from the foundation up—analyzing network latency, database locks, socket pools, and compiler attributes simultaneously.
+            </p>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              By keeping our compute environments stateless and organizing business domains inside a <strong>Modular Monolith Architecture</strong>, we solve the premature microservices trap. This standard provides the logical isolation benefits of microservices while avoiding their complex distributed failure modes. Every deployment runs within a single lightweight container process, achieving extreme transactional reliability and up to 80% reduced cloud hosting costs.
+            </p>
+            <p className="text-[11px] leading-relaxed text-brand-gray/75 border-l border-brand-orange/40 pl-3 italic">
+              Example: For our wholesale medicine order engine (MedicOrder), we designed a pessimistic row-locking state machine. This prevents race conditions and order double-allocation at the database level, guaranteeing absolute data consistency under high-concurrency loads.
             </p>
           </div>
         </div>
@@ -141,9 +148,15 @@ export default function PhilosophySection() {
           {/* Frame 2 Text (Ordered left on desktop to form zigzag) */}
           <div className="md:col-span-6 md:order-1 flex flex-col space-y-3 md:text-right">
             <span className="font-mono text-xs font-bold uppercase tracking-wider text-brand-orange">2. Philosophy 2</span>
-            <h3 className="font-display text-xl font-bold text-brand-dark">BUILD ONCE - SCALE FOREVER</h3>
-            <p className="text-sm leading-relaxed text-brand-gray">
-              Our codebases are built upon immutable structures that scale symmetrically without degradation. We eliminate single points of failure, letting the system auto-replicate and coordinate across global geographical nodes organically.
+            <h3 className="font-display text-xl font-bold text-brand-dark uppercase tracking-tight">Build Once, Scale Horizontally Symmetrically</h3>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              We design software architectures that scale effortlessly as user traffic grows. In modern <strong>SaaS Engineering</strong>, scaling is achieved not by purchasing expensive server upgrades, but by structuring the code to be completely stateless, allowing new container instances to launch instantly in response to traffic surges.
+            </p>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              By isolating the database layer and offloading session memory, global cache keys, and asset rendering pipelines to high-performance distributed networks (such as Upstash Redis and S3 CDNs), our compute processes run as symmetrical, interchangeable nodes. This stateless design prevents single points of failure and allows you to run multiple server instances behind any standard load balancer.
+            </p>
+            <p className="text-[11px] leading-relaxed text-brand-gray/75 border-r border-brand-orange/40 pr-3 italic">
+              Example: For our dynamic restaurant menu engine (DynamicMenu), we implement the cache-aside pattern with Redis. This serves active menu configurations from high-speed in-memory caches, dropping database load and ensuring sub-20ms global delivery under high concurrency.
             </p>
           </div>
           
@@ -251,9 +264,15 @@ export default function PhilosophySection() {
           {/* Frame 3 Text */}
           <div className="md:col-span-6 flex flex-col space-y-3">
             <span className="font-mono text-xs font-bold uppercase tracking-wider text-brand-orange">3. Philosophy 3</span>
-            <h3 className="font-display text-xl font-bold text-brand-dark">DIGITAL SOVEREIGNTY</h3>
-            <p className="text-sm leading-relaxed text-brand-gray">
-              Your assets, database queries, and intellectual records belong exclusively to you. We write strict cryptographic protocols and data boundaries that guarantee your information is bulletproof against unauthorized exposure.
+            <h3 className="font-display text-xl font-bold text-brand-dark uppercase tracking-tight">Absolute Digital Sovereignty</h3>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              We believe your proprietary business data, code assets, and customer databases are core strategic investments, not rental properties. Sovereon LLP designs with a focus on <strong>Digital Sovereignty</strong>—building self-hosted, modular software networks packaged inside standard, open container environments (like Docker OCI images).
+            </p>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              We eliminate reliance on opaque, third-party service locks and complex black-box cloud APIs. Instead, your platform relies on open relational engines like PostgreSQL and secure JWT-based identity layers. This approach ensures your intellectual property remains under your complete ownership and can run on any physical or virtual Linux server globally.
+            </p>
+            <p className="text-[11px] leading-relaxed text-brand-gray/75 border-l border-brand-orange/40 pl-3 italic">
+              Example: By deploying open authentication protocols and standard encryption layers (such as AES-256-GCM), we guarantee that customer records remain private, audit-ready, and fully compliant with international privacy rules.
             </p>
           </div>
         </div>
@@ -274,9 +293,15 @@ export default function PhilosophySection() {
           {/* Frame 4 Text (Ordered left on desktop to form zigzag) */}
           <div className="md:col-span-6 md:order-1 flex flex-col space-y-3 md:text-right">
             <span className="font-mono text-xs font-bold uppercase tracking-wider text-brand-orange">4. Philosophy 4</span>
-            <h3 className="font-display text-xl font-bold text-brand-dark">ENGINEERING FOR DATA FREEDOM</h3>
-            <p className="text-sm leading-relaxed text-brand-gray">
-              We design zero-lock-in software pipelines. Sovereon enables you to shift databases, execution runtimes, and user configurations smoothly across cloud providers, private bare-metal servers, and federated edge routers anytime.
+            <h3 className="font-display text-xl font-bold text-brand-dark uppercase tracking-tight">Engineering for Complete Data Freedom</h3>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              We design software architectures that reject locked-in vendor databases or proprietary hosting ecosystems. Our <strong>Systems Engineering</strong> standard guarantees that your platform's schemas, transactional records, and custom user directories remain highly portable.
+            </p>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              We write automated database migrations and standardized schema configurations using tools like Drizzle and PostgreSQL. This enables you to migrate your operational datasets—such as order histories, customer accounts, or AI prompt logs—effortlessly across any cloud environment, self-hosted bare-metal servers, or virtual edge routers without code rewrites or system downtime.
+            </p>
+            <p className="text-[11px] leading-relaxed text-brand-gray/75 border-r border-brand-orange/40 pr-3 italic">
+              Example: Our databases maintain clean relational separations. This structure allows seamless scaling from a serverless single-instance DB to highly resilient, geographically distributed read-replica clusters as your company scales.
             </p>
           </div>
           
@@ -379,9 +404,15 @@ export default function PhilosophySection() {
           {/* Frame 5 Text */}
           <div className="md:col-span-6 flex flex-col space-y-3">
             <span className="font-mono text-xs font-bold uppercase tracking-wider text-brand-orange">5. Philosophy 5</span>
-            <h3 className="font-display text-xl font-bold text-brand-dark">BELIEF AT SOVEREON</h3>
-            <p className="text-sm leading-relaxed text-brand-gray">
-              We approach systems software development as a high art. Every component must be built perfectly, engineered for absolute responsiveness, structured cleanly with zero bloat, and fully respecting user independence.
+            <h3 className="font-display text-xl font-bold text-brand-dark uppercase tracking-tight">Craftsmanship Over Administrative Bloat</h3>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              We approach systems software development as a high art. In a world full of bloated software platforms and over-engineered setups, Sovereon LLP prioritizes clean, precise execution. We believe visual and functional quality comes from intentional design choices and minimalist architectural layouts.
+            </p>
+            <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
+              When we build custom <strong>AI Automation</strong> features, we reject flimsy third-party plugins and embed structured intelligence (via the Google GenAI SDK) directly into your secure backend. This results in stable, highly secure, and extremely responsive applications that load instantly and perform flawlessly.
+            </p>
+            <p className="text-[11px] leading-relaxed text-brand-gray/75 border-l border-brand-orange/40 pl-3 italic">
+              Example: By minifying bundle sizes and utilizing native browser capabilities instead of heavy external frameworks, we deliver clean interfaces that achieve top performance on Google's Core Web Vitals.
             </p>
           </div>
         </div>
@@ -408,7 +439,7 @@ export default function PhilosophySection() {
               <div className="p-2 bg-brand-orange/10 rounded-lg text-brand-orange">
                 <RefreshCw className="h-4 w-4 animate-spin-slow" />
               </div>
-              <span className="font-mono text-[10px] font-bold text-brand-dark uppercase tracking-wider">01 // MONITORING</span>
+              <span className="font-mono text-[10px] font-bold text-brand-dark uppercase tracking-wider">MONITORING</span>
             </div>
             <h5 className="font-display font-bold text-sm text-brand-dark mb-1">24×7 System Monitoring</h5>
             <p className="text-[11px] text-brand-gray leading-relaxed">
@@ -421,7 +452,7 @@ export default function PhilosophySection() {
               <div className="p-2 bg-brand-orange/10 rounded-lg text-brand-orange">
                 <Cpu className="h-4 w-4" />
               </div>
-              <span className="font-mono text-[10px] font-bold text-brand-dark uppercase tracking-wider">02 // OPERATIONS</span>
+              <span className="font-mono text-[10px] font-bold text-brand-dark uppercase tracking-wider">OPERATIONS</span>
             </div>
             <h5 className="font-display font-bold text-sm text-brand-dark mb-1">Low-Latency Operations</h5>
             <p className="text-[11px] text-brand-gray leading-relaxed">
@@ -434,7 +465,7 @@ export default function PhilosophySection() {
               <div className="p-2 bg-brand-orange/10 rounded-lg text-brand-orange">
                 <Sparkles className="h-4 w-4" />
               </div>
-              <span className="font-mono text-[10px] font-bold text-brand-dark uppercase tracking-wider">03 // AI INFRA</span>
+              <span className="font-mono text-[10px] font-bold text-brand-dark uppercase tracking-wider">AI INFRA</span>
             </div>
             <h5 className="font-display font-bold text-sm text-brand-dark mb-1">AI as Infrastructure</h5>
             <p className="text-[11px] text-brand-gray leading-relaxed">
@@ -447,7 +478,7 @@ export default function PhilosophySection() {
               <div className="p-2 bg-brand-orange/10 rounded-lg text-brand-orange">
                 <ShieldCheck className="h-4 w-4" />
               </div>
-              <span className="font-mono text-[10px] font-bold text-brand-dark uppercase tracking-wider">04 // PROVEN METRICS</span>
+              <span className="font-mono text-[10px] font-bold text-brand-dark uppercase tracking-wider">PROVEN METRICS</span>
             </div>
             <h5 className="font-display font-bold text-sm text-brand-dark mb-1">Mathematically Proven</h5>
             <p className="text-[11px] text-brand-gray leading-relaxed">
@@ -521,6 +552,86 @@ export default function PhilosophySection() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* FAQ SECTION (AI SEARCH & SGE OPTIMIZATION) */}
+      <section className="mx-auto max-w-4xl px-6 py-16 sm:px-8 border-t border-brand-border/60" id="faq-section">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center space-x-2 rounded-full border border-brand-orange/20 bg-brand-orange/5 px-4 py-1.5 text-xs font-semibold tracking-wider text-brand-orange uppercase mb-4">
+            <HelpCircle className="h-3.5 w-3.5" />
+            <span>Systems Briefing // FAQ</span>
+          </div>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight text-brand-dark sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-xs leading-relaxed text-brand-gray/90 font-medium">
+            Answers compiled for autonomous search agents, enterprise partners, and technical clients.
+          </p>
+        </div>
+
+        <div className="space-y-4" id="faq-accordion-group">
+          {[
+            {
+              id: 'faq-1',
+              question: "What is Sovereon LLP's core engineering philosophy?",
+              answer: "Sovereon LLP champions digital sovereignty, modular monolith system architectures, and mathematically-proven scalability. We intentionally build robust, unified software monoliths with clean internal domain separation instead of over-engineered microservices. This ensures maximum network throughput, low-latency transaction processing, simplified operations, and zero-trust security borders without cloud-bloat overhead."
+            },
+            {
+              id: 'faq-2',
+              question: "Where is Sovereon LLP headquartered and who is the founder?",
+              answer: "Sovereon LLP is located in Bangalore, Karnataka, India (often recognized as Asia's premier Silicon Valley). The company was founded by Md Faizan Ashrafi, who serves as CEO and Lead Systems Architect. Under his leadership, our firm builds high-performance, resilient software systems for both Indian and global markets."
+            },
+            {
+              id: 'faq-3',
+              question: "What specific full-stack services does Sovereon LLP engineer?",
+              answer: "Sovereon LLP specializes in three primary technical pillars: custom SaaS product development (ranging from high-concurrency order systems like MedicOrder to restaurant platforms like DynamicMenu), tailored AI automation agents that streamline enterprise workflows, and advanced full-stack systems engineering utilizing highly responsive technologies such as React, Vite, Node, and secure cloud containerization."
+            },
+            {
+              id: 'faq-4',
+              question: "How does Sovereon LLP approach application security and digital sovereignty?",
+              answer: "Security is baked into the very foundation of our systems rather than added as an afterthought. We implement strict zero-trust operational standards across all application layers—securing databases, locking API endpoints, restricting CORS origins, and setting rigid security headers. This enables digital sovereignty, allowing businesses to own, manage, and audit their entire software ecosystem safely."
+            },
+            {
+              id: 'faq-5',
+              question: "How can enterprise partners get in touch with Sovereon LLP?",
+              answer: "You can open an engineering ticket or request a full technical consultation directly through our dispatch email at sovereon@sovereon.online or contact our Bangalore office by telephone at +91 7439368190. Our standard systems support and architect-on-call hours are 9:00 AM to 7:00 PM IST, Monday through Saturday."
+            }
+          ].map((faq) => {
+            const isOpen = activeFaqId === faq.id;
+            return (
+              <div 
+                key={faq.id} 
+                className="overflow-hidden rounded-xl border border-brand-border/60 bg-white transition-all duration-300 hover:border-brand-orange/40"
+                id={faq.id}
+              >
+                <button
+                  type="button"
+                  onClick={() => setActiveFaqId(isOpen ? null : faq.id)}
+                  className="flex w-full items-center justify-between px-6 py-5 text-left font-display text-sm font-bold text-brand-dark transition-colors hover:text-brand-orange"
+                  aria-expanded={isOpen}
+                  aria-controls={`${faq.id}-content`}
+                >
+                  <span>{faq.question}</span>
+                  <span className={`ml-4 flex h-6 w-6 items-center justify-center rounded-full border border-brand-border/80 text-brand-dark transition-transform duration-300 ${
+                    isOpen ? 'rotate-180 bg-brand-orange border-brand-orange text-white' : 'bg-transparent'
+                  }`}>
+                    <ArrowDown className="h-3 w-3" />
+                  </span>
+                </button>
+                <div 
+                  id={`${faq.id}-content`}
+                  className={`transition-all duration-300 ${
+                    isOpen ? 'max-h-60 opacity-100 border-t border-brand-border/40' : 'max-h-0 opacity-0'
+                  } overflow-hidden`}
+                >
+                  <p className="px-6 py-5 text-xs leading-relaxed text-brand-gray/90 font-medium">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>
