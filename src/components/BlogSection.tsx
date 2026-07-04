@@ -157,21 +157,27 @@ export default function BlogSection({ activeRoute }: BlogSectionProps) {
 
               {/* Author Bio Box */}
               <div className="mt-16 rounded-2xl border border-brand-border/60 bg-white p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
-                <img
-                  src="https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png"
-                  alt="Md Faizan Ashrafi - Lead Architect of Sovereon LLP"
-                  referrerPolicy="no-referrer"
-                  loading="lazy"
-                  decoding="async"
-                  width="100"
-                  height="100"
-                  className="rounded-full border border-brand-border bg-brand-bg object-cover h-20 w-20 grayscale"
-                />
+                <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="block">
+                  <img
+                    src="https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png"
+                    alt="Md Faizan Ashrafi - Lead Architect of Sovereon LLP"
+                    referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
+                    width="100"
+                    height="100"
+                    className="rounded-full border border-brand-border bg-brand-bg object-cover h-20 w-20 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                  />
+                </a>
                 <div className="space-y-2 text-center sm:text-left">
-                  <h4 className="font-display text-sm font-bold text-brand-dark">Md Faizan Ashrafi</h4>
+                  <h4 className="font-display text-sm font-bold text-brand-dark">
+                    <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">
+                      Md Faizan Ashrafi
+                    </a>
+                  </h4>
                   <p className="font-mono text-[9px] text-brand-orange font-bold uppercase tracking-wider">// CEO &amp; SYSTEM LEAD, SOVEREON LLP</p>
                   <p className="text-[11px] text-brand-gray font-medium leading-relaxed">
-                    Faizan designs, builds, and scales high-performance, resilient software systems. Under his leadership, our firm champions digital sovereignty and Modular Monolithic engineering globally. Connect on GitHub: <a href="https://github.com/mdfaizanashrafi" target="_blank" rel="noopener noreferrer" className="text-brand-orange font-bold hover:underline">mdfaizanashrafi</a>.
+                    Faizan designs, builds, and scales high-performance, resilient software systems. Under his leadership, our firm champions digital sovereignty and Modular Monolithic engineering globally. Connect on his <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-brand-orange font-bold hover:underline">Portfolio</a> or on GitHub: <a href="https://github.com/mdfaizanashrafi" target="_blank" rel="noopener noreferrer" className="text-brand-orange font-bold hover:underline">mdfaizanashrafi</a>.
                   </p>
                 </div>
               </div>

@@ -30,16 +30,18 @@ export default function AboutSection() {
           <div className="md:col-span-4 flex justify-center">
             <div className="relative group">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-orange to-orange-600 opacity-20 blur-md transition duration-500 group-hover:opacity-40"></div>
-              <img
-                src="https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png"
-                alt="Md Faizan Ashrafi - Founder and CEO of Sovereon LLP"
-                referrerPolicy="no-referrer"
-                loading="lazy"
-                decoding="async"
-                width="240"
-                height="240"
-                className="relative rounded-2xl border border-brand-border bg-brand-bg object-cover h-60 w-60 shadow-md grayscale hover:grayscale-0 transition-all duration-500"
-              />
+              <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="block">
+                <img
+                  src="https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png"
+                  alt="Md Faizan Ashrafi - Founder and CEO of Sovereon LLP"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                  width="240"
+                  height="240"
+                  className="relative rounded-2xl border border-brand-border bg-brand-bg object-cover h-60 w-60 shadow-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
+                />
+              </a>
             </div>
           </div>
           <div className="md:col-span-8 space-y-4">
@@ -47,15 +49,27 @@ export default function AboutSection() {
               // FOUNDER SUMMARY
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark">
-              Md Faizan Ashrafi
+              <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">
+                Md Faizan Ashrafi
+              </a>
             </h2>
             <p className="font-mono text-xs text-brand-orange/90 font-bold uppercase">
               CEO &amp; Lead Systems Architect
             </p>
             <p className="text-xs leading-relaxed text-brand-gray/90 font-medium">
-              Sovereon LLP was founded by Md Faizan Ashrafi, an accomplished developer and lead systems engineer based in Bangalore, Karnataka, India. With deep technical expertise across micro-SaaS architecture, high-concurrency ordering APIs, and safe LLM automation systems, Faizan directs our firm\'s engineering standard. Under his guidance, Sovereon designs robust software monoliths that give companies full ownership of their digital ecosystems.
+              Sovereon LLP was founded by <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-brand-orange font-bold hover:underline">Md Faizan Ashrafi</a>, an accomplished developer and lead systems engineer based in Bangalore, Karnataka, India. With deep technical expertise across micro-SaaS architecture, high-concurrency ordering APIs, and safe LLM automation systems, Faizan directs our firm's engineering standard. Under his guidance, Sovereon designs robust software monoliths that give companies full ownership of their digital ecosystems.
             </p>
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap gap-4">
+              <a
+                href="https://mdfaizanashrafi.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 font-mono text-xs font-bold text-brand-dark hover:text-brand-orange transition-colors"
+              >
+                <Globe className="h-3.5 w-3.5 text-brand-orange" />
+                <span>PERSONAL PORTFOLIO</span>
+                <ExternalLink className="h-3.5 w-3.5 text-brand-gray" />
+              </a>
               <a
                 href="https://github.com/mdfaizanashrafi"
                 target="_blank"

@@ -143,7 +143,7 @@ export default function ContactSection() {
                 Ticket Staged Successfully
               </h4>
               <p className="text-xs text-green-700 leading-relaxed max-w-md mx-auto">
-                Your consultation request has been successfully dispatched to Md Faizan Ashrafi and our systems team. We will review your technical specifications and contact you within 12 hours.
+                Your consultation request has been successfully dispatched to <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-brand-orange font-bold hover:underline">Md Faizan Ashrafi</a> and our systems team. We will review your technical specifications and contact you within 12 hours.
               </p>
               <button
                 type="button"

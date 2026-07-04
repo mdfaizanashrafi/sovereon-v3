@@ -588,27 +588,47 @@ export default function PhilosophySection() {
             {
               id: 'faq-1',
               question: "What is Sovereon LLP's core engineering philosophy?",
-              answer: "Sovereon LLP champions digital sovereignty, modular monolith system architectures, and mathematically-proven scalability. We intentionally build robust, unified software monoliths with clean internal domain separation instead of over-engineered microservices. This ensures maximum network throughput, low-latency transaction processing, simplified operations, and zero-trust security borders without cloud-bloat overhead."
+              answer: (
+                <span>
+                  Sovereon LLP champions digital sovereignty, modular monolith system architectures, and mathematically-proven scalability. We intentionally build robust, unified software monoliths with clean internal domain separation instead of over-engineered microservices. This ensures maximum network throughput, low-latency transaction processing, simplified operations, and zero-trust security borders without cloud-bloat overhead.
+                </span>
+              )
             },
             {
               id: 'faq-2',
               question: "Where is Sovereon LLP headquartered and who is the founder?",
-              answer: "Sovereon LLP is located in Bangalore, Karnataka, India (often recognized as Asia's premier Silicon Valley). The company was founded by Md Faizan Ashrafi, who serves as CEO and Lead Systems Architect. Under his leadership, our firm builds high-performance, resilient software systems for both Indian and global markets."
+              answer: (
+                <span>
+                  Sovereon LLP is located in Bangalore, Karnataka, India (often recognized as Asia's premier Silicon Valley). The company was founded by <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-brand-orange font-bold hover:underline">Md Faizan Ashrafi</a>, who serves as CEO and Lead Systems Architect. Under his leadership, our firm builds high-performance, resilient software systems for both Indian and global markets.
+                </span>
+              )
             },
             {
               id: 'faq-3',
               question: "What specific full-stack services does Sovereon LLP engineer?",
-              answer: "Sovereon LLP specializes in three primary technical pillars: custom SaaS product development (ranging from high-concurrency order systems like MedicOrder to restaurant platforms like DynamicMenu), tailored AI automation agents that streamline enterprise workflows, and advanced full-stack systems engineering utilizing highly responsive technologies such as React, Vite, Node, and secure cloud containerization."
+              answer: (
+                <span>
+                  Sovereon LLP specializes in three primary technical pillars: custom SaaS product development (ranging from high-concurrency order systems like MedicOrder to restaurant platforms like DynamicMenu), tailored AI automation agents that streamline enterprise workflows, and advanced full-stack systems engineering utilizing highly responsive technologies such as React, Vite, Node, and secure cloud containerization.
+                </span>
+              )
             },
             {
               id: 'faq-4',
               question: "How does Sovereon LLP approach application security and digital sovereignty?",
-              answer: "Security is baked into the very foundation of our systems rather than added as an afterthought. We implement strict zero-trust operational standards across all application layers—securing databases, locking API endpoints, restricting CORS origins, and setting rigid security headers. This enables digital sovereignty, allowing businesses to own, manage, and audit their entire software ecosystem safely."
+              answer: (
+                <span>
+                  Security is baked into the very foundation of our systems rather than added as an afterthought. We implement strict zero-trust operational standards across all application layers—securing databases, locking API endpoints, restricting CORS origins, and setting rigid security headers. This enables digital sovereignty, allowing businesses to own, manage, and audit their entire software ecosystem safely.
+                </span>
+              )
             },
             {
               id: 'faq-5',
               question: "How can enterprise partners get in touch with Sovereon LLP?",
-              answer: "You can open an engineering ticket or request a full technical consultation directly through our dispatch email at sovereon@sovereon.online or contact our Bangalore office by telephone at +91 7439368190. Our standard systems support and architect-on-call hours are 9:00 AM to 7:00 PM IST, Monday through Saturday."
+              answer: (
+                <span>
+                  You can open an engineering ticket or request a full technical consultation directly through our dispatch email at sovereon@sovereon.online or contact our Bangalore office by telephone at +91 7439368190. Our standard systems support and architect-on-call hours are 9:00 AM to 7:00 PM IST, Monday through Saturday.
+                </span>
+              )
             }
           ].map((faq) => {
             const isOpen = activeFaqId === faq.id;
@@ -638,9 +658,9 @@ export default function PhilosophySection() {
                     isOpen ? 'max-h-60 opacity-100 border-t border-brand-border/40' : 'max-h-0 opacity-0'
                   } overflow-hidden`}
                 >
-                  <p className="px-6 py-5 text-xs leading-relaxed text-brand-gray/90 font-medium">
+                  <div className="px-6 py-5 text-xs leading-relaxed text-brand-gray/90 font-medium">
                     {faq.answer}
-                  </p>
+                  </div>
                 </div>
               </div>
             );

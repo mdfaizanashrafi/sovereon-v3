@@ -578,7 +578,7 @@ export default function SolutionsSection() {
                   <div className="bg-white/80 p-2.5 rounded-lg border border-brand-border/60 space-y-1.5 text-left">
                     <div className="flex items-center justify-between text-brand-dark font-mono text-[7.5px] font-bold">
                       <span>Bangalore Offline Gathering</span>
-                      <span className="text-brand-orange">● HOSTED BY FAIZAN</span>
+                      <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-brand-orange hover:underline">● HOSTED BY FAIZAN</a>
                     </div>
                     <div className="flex justify-between items-center text-[7.5px] text-brand-dark font-bold font-mono">
                       <span>📍 Cubbon Park Meetup</span>
@@ -734,7 +734,7 @@ export default function SolutionsSection() {
                 <button
                   type="submit"
                   disabled={isConsoleSimulating}
-                  className="w-full group flex items-center justify-center space-x-2 rounded-lg border border-brand-dark bg-brand-dark py-3 font-display text-sm font-semibold text-brand-bg hover:bg-transparent hover:text-brand-dark transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow"
+                  className="w-full group flex items-center justify-center space-x-2 rounded-lg border border-brand-dark bg-brand-dark py-3 font-display text-sm font-semibold text-white hover:bg-transparent hover:text-brand-dark transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow"
                 >
                   {isConsoleSimulating ? (
                     <>

@@ -70,3 +70,70 @@ body {
     linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
 }
+
+/* HIGH-END DARK THEME SUPPORT */
+.dark {
+  --color-brand-bg: #09090b;
+  --color-brand-dark: #f4f4f5;
+  --color-brand-charcoal: #18181b;
+  --color-brand-gray: #a1a1aa;
+  --color-brand-border: #1f1f23;
+  
+  color-scheme: dark;
+}
+
+/* Override standard white backgrounds with rich deep dark zinc shades */
+.dark .bg-white {
+  background-color: #0e0e11 !important;
+}
+
+.dark .bg-white\/80 {
+  background-color: rgba(14, 14, 17, 0.8) !important;
+}
+
+/* Adapt various alpha bg helpers */
+.dark .bg-brand-bg\/20 {
+  background-color: rgba(39, 39, 42, 0.2) !important;
+}
+
+.dark .bg-brand-bg\/40 {
+  background-color: rgba(39, 39, 42, 0.4) !important;
+}
+
+.dark .bg-brand-bg\/10 {
+  background-color: rgba(39, 39, 42, 0.1) !important;
+}
+
+.dark .bg-brand-bg\/30 {
+  background-color: rgba(39, 39, 42, 0.3) !important;
+}
+
+/* Ensure pure dark elements like rest console remain dark */
+.dark .bg-brand-dark.text-emerald-400 {
+  background-color: #050507 !important;
+  color: #34d399 !important;
+}
+
+.dark .bg-brand-charcoal {
+  background-color: #0e0e11 !important;
+}
+
+/* Adjust scrollbars for premium dark feel */
+.dark ::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Premium dark grid lines */
+.dark .tech-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}

@@ -183,7 +183,7 @@ export default function TopicClusterSection({ activeRoute }: TopicClusterSection
         <div className="mt-16 bg-brand-bg/30 border border-brand-border/40 p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="font-display text-sm font-bold text-brand-dark">Enterprise Software Audit Needed?</h4>
-            <p className="text-[11px] text-brand-gray font-medium">Get a complete systems analysis and architectural assessment directed by CEO Md Faizan Ashrafi.</p>
+            <p className="text-[11px] text-brand-gray font-medium">Get a complete systems analysis and architectural assessment directed by CEO <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-brand-orange font-bold hover:underline">Md Faizan Ashrafi</a>.</p>
           </div>
           <a
             href="/contact"

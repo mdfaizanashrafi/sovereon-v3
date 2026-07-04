@@ -20,6 +20,27 @@ import SanityTestSection from './components/SanityTestSection';
 
 export default function App() {
   const [activeRoute, setActiveRoute] = useState<string>('/');
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('theme');
+      if (stored) return stored === 'dark';
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return false;
+  });
+
+  // Apply class list on change and persist
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => setDarkMode(!darkMode);
 
   // 1. Core Routing Engine: Intercept PopState & Internal Anchors for Pure SPA Transitions
   useEffect(() => {
@@ -103,7 +124,7 @@ export default function App() {
       <SEOManager activeRoute={activeRoute} />
 
       {/* HEADER NAVBAR (Task 1 Compliant Header) */}
-      <Header activeRoute={activeRoute} />
+      <Header activeRoute={activeRoute} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       {/* CORE VIEWPORT */}
       <main className="flex-1 w-full">
@@ -297,6 +318,8 @@ export default function App() {
             <a href="/about" className="hover:text-brand-orange transition-colors">Company Bio</a>
             <span>·</span>
             <a href="/contact" className="hover:text-brand-orange transition-colors">Support Ticket</a>
+            <span>·</span>
+            <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors flex items-center space-x-1"><span>Founder Portfolio</span></a>
             <span>·</span>
             <a href="https://github.com/mdfaizanashrafi" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors flex items-center space-x-1"><span>GitHub</span></a>
           </div>

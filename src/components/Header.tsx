@@ -4,13 +4,15 @@
  */
 
 import { useState } from 'react';
-import { Menu, X, ArrowRight, Layers, FileText, Send, BookOpen, Compass, Mail } from 'lucide-react';
+import { Menu, X, ArrowRight, Layers, FileText, Send, BookOpen, Compass, Mail, Moon, Sun } from 'lucide-react';
 
 interface HeaderProps {
   activeRoute: string;
+  darkMode: boolean;
+  toggleDarkMode: () => void;
 }
 
-export default function Header({ activeRoute }: HeaderProps) {
+export default function Header({ activeRoute, darkMode, toggleDarkMode }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -77,8 +79,21 @@ export default function Header({ activeRoute }: HeaderProps) {
           </a>
         </nav>
 
-        {/* Mobile Menu Toggle Button - Right Aligned on Desktop (as empty space spacer) */}
-        <div className="flex lg:flex-1 justify-end">
+        {/* Right Actions Container (Theme Toggle and Mobile Menu) */}
+        <div className="flex lg:flex-1 items-center justify-end space-x-2 sm:space-x-4">
+          <button
+            onClick={toggleDarkMode}
+            className="inline-flex items-center justify-center p-2 rounded-full text-brand-dark hover:text-brand-orange hover:bg-brand-orange/5 border border-transparent hover:border-brand-border/40 focus:outline-none transition-all duration-300"
+            id="dark-mode-toggle"
+            aria-label="Toggle dark mode"
+          >
+            {darkMode ? (
+              <Sun className="h-5 w-5 text-brand-orange" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
+          </button>
+
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="inline-flex items-center justify-center p-2 rounded-md text-brand-dark hover:text-brand-orange focus:outline-none transition-colors lg:hidden"

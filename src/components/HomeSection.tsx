@@ -116,7 +116,7 @@ export default function HomeSection({
             </h2>
             
             <p className="text-sm leading-relaxed text-brand-gray/90 font-medium">
-              Based in Bangalore, India, <strong>Sovereon LLP</strong> is an elite systems engineering and digital product firm. Founded by Md Faizan Ashrafi, we specialize in building robust, secure, and highly scalable applications for both Indian and global markets. We reject the over-complications of modern software architecture in favor of clean design, modular systems, and digital sovereignty.
+              Based in Bangalore, India, <strong>Sovereon LLP</strong> is an elite systems engineering and digital product firm. Founded by <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-brand-orange font-bold hover:underline">Md Faizan Ashrafi</a>, we specialize in building robust, secure, and highly scalable applications for both Indian and global markets. We reject the over-complications of modern software architecture in favor of clean design, modular systems, and digital sovereignty.
             </p>
 
             <p className="text-sm leading-relaxed text-brand-gray/90 font-medium">
@@ -145,7 +145,7 @@ export default function HomeSection({
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
                 onClick={onGetInTouch}
-                className="group flex items-center justify-center space-x-3 rounded-full border-2 border-brand-dark bg-brand-dark px-8 py-3.5 font-display text-sm font-semibold text-brand-bg transition-all duration-300 hover:bg-transparent hover:text-brand-dark shadow-lg hover:shadow-md"
+                className="group flex items-center justify-center space-x-3 rounded-full border-2 border-brand-dark bg-brand-dark px-8 py-3.5 font-display text-sm font-semibold text-white transition-all duration-300 hover:bg-transparent hover:text-brand-dark shadow-lg hover:shadow-md"
                 id="hero-primary-cta"
               >
                 <span>GET FREE STRATEGIC CONSULTATION</span>
@@ -347,18 +347,20 @@ export default function HomeSection({
               {/* Outer double border framing */}
               <div className="absolute -inset-2 rounded-2xl border border-brand-border/40 pointer-events-none transition-all duration-300 group-hover:border-brand-orange/20"></div>
               <div className="relative aspect-square w-full overflow-hidden rounded-xl border-2 border-brand-dark bg-white shadow-md">
-                <img
-                  id="founder-profile-img"
-                  src={imageSources[imageIndex]}
-                  onError={handleImageError}
-                  alt="Md. Faizan Ashrafi"
-                  loading="lazy"
-                  decoding="async"
-                  referrerPolicy="no-referrer"
-                  className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105"
-                  width="380"
-                  height="380"
-                />
+                <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+                  <img
+                    id="founder-profile-img"
+                    src={imageSources[imageIndex]}
+                    onError={handleImageError}
+                    alt="Md. Faizan Ashrafi"
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                    className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105 cursor-pointer"
+                    width="380"
+                    height="380"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -370,7 +372,9 @@ export default function HomeSection({
                 The Philosopher // Leadership
               </span>
               <h3 className="font-display text-3xl font-extrabold tracking-tight text-brand-dark sm:text-4xl" id="founder-title">
-                Md. Faizan Ashrafi
+                <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">
+                  Md. Faizan Ashrafi
+                </a>
               </h3>
               <p className="font-mono text-xs font-semibold uppercase tracking-wider text-brand-gray">
                 Founder &amp; Principal Architect
