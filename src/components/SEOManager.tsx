@@ -98,14 +98,14 @@ export default function SEOManager({ activeRoute }: SEOManagerProps) {
     updateOrCreateMeta('meta[property="og:title"]', 'content', title);
     updateOrCreateMeta('meta[property="og:description"]', 'content', description);
     updateOrCreateMeta('meta[property="og:url"]', 'content', canonical);
-    updateOrCreateMeta('meta[property="og:image"]', 'content', 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png');
+    updateOrCreateMeta('meta[property="og:image"]', 'content', 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png');
     updateOrCreateMeta('meta[property="og:type"]', 'content', isBlogPost ? 'article' : 'website');
 
     // Twitter Updates
     updateOrCreateMeta('meta[name="twitter:title"]', 'content', title);
     updateOrCreateMeta('meta[name="twitter:description"]', 'content', description);
     updateOrCreateMeta('meta[name="twitter:url"]', 'content', canonical);
-    updateOrCreateMeta('meta[name="twitter:image"]', 'content', 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png');
+    updateOrCreateMeta('meta[name="twitter:image"]', 'content', 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png');
 
     // 4. Push Google Analytics 4 Virtual Pageview
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -165,7 +165,7 @@ export default function SEOManager({ activeRoute }: SEOManagerProps) {
         'name': 'Sovereon LLP',
         'url': 'https://sovereon.online',
         'logo': 'https://sovereon.online/favicon.svg',
-        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png',
+        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png',
         'description': 'Sovereon LLP builds advanced SaaS products and AI automation systems that solve specific real-world business pain points at scale.',
         'telephone': '+91 7439368190',
         'email': 'sovereon@sovereon.online',
@@ -187,7 +187,7 @@ export default function SEOManager({ activeRoute }: SEOManagerProps) {
         'telephone': '+91 7439368190',
         'email': 'sovereon@sovereon.online',
         'url': 'https://sovereon.online',
-        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png',
+        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png',
         'priceRange': '$$',
         'openingHoursSpecification': {
           '@type': 'OpeningHoursSpecification',
@@ -241,7 +241,7 @@ export default function SEOManager({ activeRoute }: SEOManagerProps) {
         'sameAs': [
           'https://github.com/mdfaizanashrafi'
         ],
-        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png'
+        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png'
       },
       {
         '@type': 'WebSite',
@@ -282,7 +282,7 @@ export default function SEOManager({ activeRoute }: SEOManagerProps) {
         'publisher': {
           '@id': 'https://sovereon.online/#organization'
         },
-        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png'
+        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png'
       });
       baseGraph.push({
         '@type': 'WebPage',
@@ -313,7 +313,7 @@ export default function SEOManager({ activeRoute }: SEOManagerProps) {
         'publisher': {
           '@id': 'https://sovereon.online/#organization'
         },
-        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png'
+        'image': 'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png'
       });
       baseGraph.push({
         '@type': 'WebPage',

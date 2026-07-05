@@ -159,7 +159,7 @@ export default function BlogSection({ activeRoute }: BlogSectionProps) {
               <div className="mt-16 rounded-2xl border border-brand-border/60 bg-white p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
                 <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="block">
                   <img
-                    src="https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png"
+                    src="https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png"
                     alt="Md Faizan Ashrafi - Lead Architect of Sovereon LLP"
                     referrerPolicy="no-referrer"
                     loading="lazy"

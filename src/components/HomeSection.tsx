@@ -8,7 +8,6 @@ import { motion } from 'motion/react';
 import { ArrowUpRight, Cpu, HardDrive, ShieldAlert, Award, Globe, Database, HelpCircle, Activity } from 'lucide-react';
 import HeroCanvas from './HeroCanvas';
 import { Project, Product } from '../types';
-import founderImg from '../../assets/founder.jpg';
 
 interface HomeSectionProps {
   onNavigateToPhilosophy: () => void;
@@ -24,10 +23,7 @@ export default function HomeSection({
   
   const [imageIndex, setImageIndex] = useState(0);
   const imageSources = [
-    'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png',
-    founderImg,
-    '/assets/founder.jpg',
-    '/founder.jpg',
+    'https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png',
     'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600&h=600'
   ];
 

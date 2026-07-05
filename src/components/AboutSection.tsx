@@ -32,7 +32,7 @@ export default function AboutSection() {
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-orange to-orange-600 opacity-20 blur-md transition duration-500 group-hover:opacity-40"></div>
               <a href="https://mdfaizanashrafi.vercel.app/" target="_blank" rel="noopener noreferrer" className="block">
                 <img
-                  src="https://res.cloudinary.com/dn8rbacc5/image/upload/v1783058089/founder_w7w37t.png"
+                  src="https://res.cloudinary.com/dn8rbacc5/image/upload/v1783247054/founder_od2lw5.png"
                   alt="Md Faizan Ashrafi - Founder and CEO of Sovereon LLP"
                   referrerPolicy="no-referrer"
                   loading="lazy"
