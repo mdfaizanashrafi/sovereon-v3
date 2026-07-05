@@ -242,13 +242,16 @@ export default function SolutionsSection() {
         {/* FOUR SQUARE BOXES BENTO-GRID (FRAMES 6 TO 9) */}
         <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {solutionsList.map((sol) => {
-            const isRedirect = sol.id === 'sol-4';
+            const isRedirect = sol.id === 'sol-4' || sol.id === 'sol-1';
+            const redirectUrl = sol.id === 'sol-4' 
+              ? 'https://de-screen-web.vercel.app/' 
+              : 'https://mdfaizanashrafi.github.io/Dynamic-Menu/';
             const CardComponent = isRedirect ? 'a' : 'button';
             return (
               <CardComponent
                 key={sol.id}
                 {...(isRedirect ? {
-                  href: 'https://de-screen-web.vercel.app/',
+                  href: redirectUrl,
                   target: '_blank',
                   rel: 'noopener noreferrer'
                 } : {
@@ -299,7 +302,7 @@ export default function SolutionsSection() {
           {/* Frame 9: Solution 1 Details */}
           <div 
             ref={detailRefs['sol-1']}
-            className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-28 transition-all duration-300 ${
+            className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-28 transition-all duration-300 hover:opacity-100 ${
               selectedSolution === 'sol-1' ? 'opacity-100' : 'opacity-65'
             }`}
           >
@@ -358,6 +361,18 @@ export default function SolutionsSection() {
                 {solutionsList[0].description}
               </p>
               
+              <div className="flex flex-col md:items-start pt-2 pb-4">
+                <a 
+                  href="https://mdfaizanashrafi.github.io/Dynamic-Menu/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center space-x-2 rounded-full border-2 border-brand-orange bg-brand-orange/5 px-5 py-2.5 text-xs font-bold tracking-wider text-brand-orange uppercase hover:bg-brand-orange hover:text-white transition-all duration-300 shadow-sm"
+                >
+                  <span>Launch DynamicMenu platform</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
+              
               {/* Custom specs */}
               <div className="grid grid-cols-2 gap-3 pt-3 border-t border-brand-border/60">
                 {solutionsList[0].techSpecs.map(spec => (
@@ -373,7 +388,7 @@ export default function SolutionsSection() {
           {/* Frame 10: Solution 2 Details */}
           <div 
             ref={detailRefs['sol-2']}
-            className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-28 transition-all duration-300 ${
+            className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-28 transition-all duration-300 hover:opacity-100 ${
               selectedSolution === 'sol-2' ? 'opacity-100' : 'opacity-65'
             }`}
           >
@@ -447,7 +462,7 @@ export default function SolutionsSection() {
           {/* Frame 11: Solution 3 Details */}
           <div 
             ref={detailRefs['sol-3']}
-            className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-28 transition-all duration-300 ${
+            className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-28 transition-all duration-300 hover:opacity-100 ${
               selectedSolution === 'sol-3' ? 'opacity-100' : 'opacity-65'
             }`}
           >
@@ -519,7 +534,7 @@ export default function SolutionsSection() {
           {/* Frame 12: Solution 4 Details */}
           <div 
             ref={detailRefs['sol-4']}
-            className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-28 transition-all duration-300 ${
+            className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center scroll-mt-28 transition-all duration-300 hover:opacity-100 ${
               selectedSolution === 'sol-4' ? 'opacity-100' : 'opacity-65'
             }`}
           >

@@ -56,7 +56,7 @@ export default function HomeSection({
       logoText: 'DM',
       logoBg: 'bg-brand-dark text-white hover:bg-brand-orange hover:text-white group-hover:bg-brand-orange group-hover:text-white transition-all duration-300 cursor-pointer',
       description: 'A robust digital menu builder designed for modern gastronomy. Allows restaurant operators to instantly design, publish, and update beautiful, interactive menus with real-time QR code generation and instant checkout integrations.',
-      link: '#',
+      link: 'https://mdfaizanashrafi.github.io/Dynamic-Menu/',
       category: 'Restaurant SaaS',
       tags: ['React', 'Next.js', 'QR-Engine']
     },
