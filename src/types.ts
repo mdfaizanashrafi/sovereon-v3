@@ -14,12 +14,14 @@ export interface Project {
   link: string;
   category: string;
   tags: string[];
+  imageUrl?: string;
 }
 
 export interface Product {
   name: string;
   symbol: string;
   description: string;
+  imageUrl?: string;
 }
 
 export interface PhilosophyFrame {

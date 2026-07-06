@@ -35,10 +35,10 @@ export default function HomeSection({
 
   // Custom Sovereon Products for the Infinite Scrolling Marquee Banner
   const products: Product[] = [
-    { name: 'DynamicMenu', symbol: '🍽️', description: 'SaaS for restaurants menu creation tool' },
-    { name: 'MedicOrder', symbol: '💊', description: 'SaaS for Wholesale order of medicines' },
-    { name: 'GymRat', symbol: '🏋️', description: 'SaaS for gym rats on the move' },
-    { name: 'de-screen', symbol: '👥', description: 'SaaS for meaningful in-person experiences' },
+    { name: 'DynamicMenu', symbol: '🍽️', description: 'SaaS for restaurants menu creation tool', imageUrl: '/dynamicMenu-favicon.png' },
+    { name: 'MedicOrder', symbol: '💊', description: 'SaaS for Wholesale order of medicines', imageUrl: '/medicOrder-favicon.png' },
+    { name: 'GymRat', symbol: '🏋️', description: 'SaaS for gym rats on the move', imageUrl: '/gymrat-favicon.png' },
+    { name: 'de-screen', symbol: '👥', description: 'SaaS for meaningful in-person experiences', imageUrl: '/deScreen-favicon.png' },
   ];
 
   // Double the products array to allow seamless looping in the marquee
@@ -54,7 +54,8 @@ export default function HomeSection({
       description: 'A robust digital menu builder designed for modern gastronomy. Allows restaurant operators to instantly design, publish, and update beautiful, interactive menus with real-time QR code generation and instant checkout integrations.',
       link: 'https://mdfaizanashrafi.github.io/Dynamic-Menu/',
       category: 'Restaurant SaaS',
-      tags: ['React', 'Next.js', 'QR-Engine']
+      tags: ['React', 'Next.js', 'QR-Engine'],
+      imageUrl: '/dynamicMenu-favicon.png'
     },
     {
       id: 'proj-2',
@@ -64,7 +65,8 @@ export default function HomeSection({
       description: 'The definitive wholesale order-routing engine facilitating supply links between medicine stockists and independent vendors. Built on zero-trust transactional logging, optimizing wholesale bulk medicine distribution at speed.',
       link: 'https://mdfaizanashrafi.github.io/medicOrder-v1/',
       category: 'Healthcare Logistics',
-      tags: ['PostgreSQL', 'TypeScript', 'ACID-Transactions']
+      tags: ['PostgreSQL', 'TypeScript', 'ACID-Transactions'],
+      imageUrl: '/medicOrder-favicon.png'
     },
     {
       id: 'proj-3',
@@ -74,7 +76,8 @@ export default function HomeSection({
       description: 'A global training-hub locator and session scheduler designed specifically for traveling fitness enthusiasts. Aggregates multi-location gym memberships, tracking workouts and maintaining streak counts as you migrate across borders.',
       link: 'https://mdfaizanashrafi.github.io/gymrat-v1/',
       category: 'Fitness & Travel',
-      tags: ['Geolocation', 'WASM', 'Real-Time Sync']
+      tags: ['Geolocation', 'WASM', 'Real-Time Sync'],
+      imageUrl: '/gymrat-favicon.png'
     },
     {
       id: 'proj-4',
@@ -84,7 +87,8 @@ export default function HomeSection({
       description: 'Connect with genuine people for meaningful in-person experiences. Escape digital fatigue and rediscover the joy of real human connection.',
       link: 'https://mdfaizanashrafi.github.io/deScreen-v1/',
       category: 'Offline Social',
-      tags: ['In-Person', 'Social Network', 'Anti-Screen']
+      tags: ['In-Person', 'Social Network', 'Anti-Screen'],
+      imageUrl: '/deScreen-favicon.png'
     }
   ];
 
@@ -174,8 +178,17 @@ export default function HomeSection({
                 className="flex items-center space-x-4 mx-8 px-6 py-3 border border-brand-border/60 bg-brand-bg/40 rounded-xl transition-all hover:border-brand-orange/40 hover:bg-white hover:shadow-sm"
               >
                 {/* Logo / Symbol */}
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-dark font-mono text-lg font-bold text-brand-orange">
-                  {product.symbol}
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-dark font-mono text-lg font-bold text-brand-orange overflow-hidden">
+                  {product.imageUrl ? (
+                    <img 
+                      src={product.imageUrl} 
+                      alt={product.name} 
+                      className="h-full w-full object-contain p-1 bg-white" 
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    product.symbol
+                  )}
                 </span>
                 
                 {/* Product Name */}
@@ -281,8 +294,17 @@ export default function HomeSection({
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       {/* Logo block */}
-                      <div className={`flex h-11 w-11 items-center justify-center rounded-lg font-mono text-base font-bold shadow-sm ${project.logoBg}`}>
-                        {project.logoText}
+                      <div className={`flex h-11 w-11 items-center justify-center rounded-lg font-mono text-base font-bold shadow-sm overflow-hidden ${project.logoBg}`}>
+                        {project.imageUrl ? (
+                          <img 
+                            src={project.imageUrl} 
+                            alt={project.name} 
+                            className="h-full w-full object-contain p-1.5 bg-white" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : (
+                          project.logoText
+                        )}
                       </div>
                       <div className="flex flex-col">
                         <span className="font-display font-extrabold text-base text-brand-dark">
