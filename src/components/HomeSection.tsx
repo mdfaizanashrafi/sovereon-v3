@@ -62,7 +62,7 @@ export default function HomeSection({
       logoText: 'MO',
       logoBg: 'bg-brand-dark text-white hover:bg-brand-orange hover:text-white group-hover:bg-brand-orange group-hover:text-white transition-all duration-300 cursor-pointer',
       description: 'The definitive wholesale order-routing engine facilitating supply links between medicine stockists and independent vendors. Built on zero-trust transactional logging, optimizing wholesale bulk medicine distribution at speed.',
-      link: '#',
+      link: 'https://mdfaizanashrafi.github.io/medicOrder-v1/',
       category: 'Healthcare Logistics',
       tags: ['PostgreSQL', 'TypeScript', 'ACID-Transactions']
     },
@@ -72,7 +72,7 @@ export default function HomeSection({
       logoText: 'GR',
       logoBg: 'bg-brand-charcoal text-white border border-brand-border hover:bg-brand-orange hover:border-brand-orange hover:text-white group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-white transition-all duration-300 cursor-pointer',
       description: 'A global training-hub locator and session scheduler designed specifically for traveling fitness enthusiasts. Aggregates multi-location gym memberships, tracking workouts and maintaining streak counts as you migrate across borders.',
-      link: '#',
+      link: 'https://mdfaizanashrafi.github.io/gymrat-v1/',
       category: 'Fitness & Travel',
       tags: ['Geolocation', 'WASM', 'Real-Time Sync']
     },

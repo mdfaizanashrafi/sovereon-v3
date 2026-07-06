@@ -242,21 +242,11 @@ export default function SolutionsSection() {
         {/* FOUR SQUARE BOXES BENTO-GRID (FRAMES 6 TO 9) */}
         <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {solutionsList.map((sol) => {
-            const isRedirect = sol.id === 'sol-4' || sol.id === 'sol-1';
-            const redirectUrl = sol.id === 'sol-4' 
-              ? 'https://de-screen-web.vercel.app/' 
-              : 'https://mdfaizanashrafi.github.io/Dynamic-Menu/';
-            const CardComponent = isRedirect ? 'a' : 'button';
             return (
-              <CardComponent
+              <button
                 key={sol.id}
-                {...(isRedirect ? {
-                  href: redirectUrl,
-                  target: '_blank',
-                  rel: 'noopener noreferrer'
-                } : {
-                  onClick: () => handleSolutionSelect(sol.id)
-                })}
+                type="button"
+                onClick={() => handleSolutionSelect(sol.id)}
                 className={`aspect-square w-full rounded-2xl border p-6 text-left flex flex-col justify-between transition-all duration-300 relative group cursor-pointer ${
                   selectedSolution === sol.id
                     ? 'border-brand-dark bg-white shadow-md scale-[1.02]'
@@ -286,10 +276,10 @@ export default function SolutionsSection() {
 
                 {/* Bottom detail action */}
                 <div className="flex items-center justify-between font-mono text-[10px] font-semibold text-brand-gray/60 group-hover:text-brand-dark">
-                  <span>{isRedirect ? '[ REDIRECT TO SYSTEM ]' : `[ ENGAGE SYSTEM_0${sol.frameId - 5} ]`}</span>
+                  <span>{`[ ENGAGE SYSTEM_0${sol.frameId - 5} ]`}</span>
                   <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
                 </div>
-              </CardComponent>
+              </button>
             );
           })}
         </div>
@@ -403,6 +393,18 @@ export default function SolutionsSection() {
               <p className="text-sm leading-relaxed text-brand-gray">
                 {solutionsList[1].description}
               </p>
+              
+              <div className="flex flex-col md:items-end pt-2 pb-4">
+                <a 
+                  href="https://mdfaizanashrafi.github.io/medicOrder-v1/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center space-x-2 rounded-full border-2 border-brand-orange bg-brand-orange/5 px-5 py-2.5 text-xs font-bold tracking-wider text-brand-orange uppercase hover:bg-brand-orange hover:text-white transition-all duration-300 shadow-sm"
+                >
+                  <span>Launch MedicOrder platform</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
               
               {/* Custom specs */}
               <div className="grid grid-cols-2 gap-3 pt-3 border-t border-brand-border/60 md:justify-items-end">
@@ -518,6 +520,18 @@ export default function SolutionsSection() {
               <p className="text-sm leading-relaxed text-brand-gray">
                 {solutionsList[2].description}
               </p>
+              
+              <div className="flex flex-col md:items-start pt-2 pb-4">
+                <a 
+                  href="https://mdfaizanashrafi.github.io/gymrat-v1/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center space-x-2 rounded-full border-2 border-brand-orange bg-brand-orange/5 px-5 py-2.5 text-xs font-bold tracking-wider text-brand-orange uppercase hover:bg-brand-orange hover:text-white transition-all duration-300 shadow-sm"
+                >
+                  <span>Launch GymRat platform</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
               
               {/* Custom specs */}
               <div className="grid grid-cols-2 gap-3 pt-3 border-t border-brand-border/60">
