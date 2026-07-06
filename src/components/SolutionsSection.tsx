@@ -566,7 +566,7 @@ export default function SolutionsSection() {
               
               <div className="flex flex-col md:items-end pt-2 pb-4">
                 <a 
-                  href="https://de-screen-web.vercel.app/" 
+                  href="https://mdfaizanashrafi.github.io/deScreen-v1/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-flex items-center space-x-2 rounded-full border-2 border-brand-orange bg-brand-orange/5 px-5 py-2.5 text-xs font-bold tracking-wider text-brand-orange uppercase hover:bg-brand-orange hover:text-white transition-all duration-300 shadow-sm"

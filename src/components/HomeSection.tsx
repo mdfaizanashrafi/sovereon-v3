@@ -82,7 +82,7 @@ export default function HomeSection({
       logoText: 'DS',
       logoBg: 'bg-brand-dark text-white hover:bg-brand-orange hover:text-white group-hover:bg-brand-orange group-hover:text-white transition-all duration-300 cursor-pointer',
       description: 'Connect with genuine people for meaningful in-person experiences. Escape digital fatigue and rediscover the joy of real human connection.',
-      link: 'https://de-screen-web.vercel.app/',
+      link: 'https://mdfaizanashrafi.github.io/deScreen-v1/',
       category: 'Offline Social',
       tags: ['In-Person', 'Social Network', 'Anti-Screen']
     }
